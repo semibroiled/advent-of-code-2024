@@ -6,6 +6,9 @@ import kotlin.io.path.*
 import kotlin.math.abs
 
 fun main() {
+    // Part One
+    println("Day 1")
+    println("Part One")
     // Ascertain current directory
     val rootDirectory = System.getProperty("user.dir")
     println("Current root Directory: $rootDirectory")
@@ -50,5 +53,19 @@ fun main() {
     }
 
     println("Total distance: $totalDistance")
+
+    // Part Two
+    println("Part Two")
+
+    // Running counter for similarity score
+    var similarityScore = 0
+
+    leftList.forEach() { leftNum ->
+        val countInRight = rightList.count { rightNum -> rightNum == leftNum }
+        similarityScore += leftNum * countInRight
+    }
+
+    println("Similarity Score: $similarityScore")
+
 }
 
