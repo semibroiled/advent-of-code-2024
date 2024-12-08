@@ -3,8 +3,6 @@ import java.nio.file.Path
 // import java.nio.file.Paths
 import kotlin.io.path.*
 // import java.io.File
-import java.math.BigInteger
-import java.net.URI
 import kotlin.math.abs
 
 fun main() {
@@ -23,10 +21,10 @@ fun main() {
     println(contentAsArray)
 
     // Counter for Total Distance
-    var totalDistance: Int = 0;
+    var totalDistance = 0
 
-    val leftList: MutableList<Int> = mutableListOf<Int>();
-    val rightList: MutableList<Int> = mutableListOf<Int>();
+    val leftList: MutableList<Int> = mutableListOf()
+    val rightList: MutableList<Int> = mutableListOf()
 
     for (pairs in contentAsArray) {
         val pair = pairs.trim().split("   ").filter { it.isNotBlank() }
