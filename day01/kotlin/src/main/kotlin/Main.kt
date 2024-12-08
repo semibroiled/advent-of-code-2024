@@ -1,5 +1,5 @@
 // Handle Filesystem Tasks
-// import java.nio.file.Path
+import java.nio.file.Path
 // import java.nio.file.Paths
 import kotlin.io.path.*
 // import java.io.File
@@ -13,10 +13,10 @@ fun main() {
     println("Current root Directory: $rootDirectory")
 
     // Input is one directory above
-    val path = URI("/Users/acm/AdventOfCode/aoc_2024/advent-of-code-2024/day01/input.txt")
+    val path = Path.of("/Users/acm/AdventOfCode/aoc_2024/advent-of-code-2024/day01/input.txt")
 
     // Read contents of txt file
-    val inputContent = path.toPath().readText()
+    val inputContent = path.readText()
 
     // Split by return carriage and space
     val contentAsArray = inputContent.split("\n")
