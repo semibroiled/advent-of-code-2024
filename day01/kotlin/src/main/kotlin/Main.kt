@@ -13,7 +13,7 @@ fun main() {
     println("Current root Directory: $rootDirectory")
 
     // Input is one directory above
-    val path = Path.of("/Users/acm/AdventOfCode/aoc_2024/advent-of-code-2024/day01/input.txt")
+    val path = Path.of("../input.txt")
 
     // Read contents of txt file
     val inputContent = path.readText()
@@ -22,40 +22,35 @@ fun main() {
     val contentAsArray = inputContent.split("\n")
     println(contentAsArray)
 
+    // Counter for Total Distance
     var totalDistance: Int = 0;
 
-    val array1: MutableList<Int> = mutableListOf<Int>();
-    val array2: MutableList<Int> = mutableListOf<Int>();
+    val leftList: MutableList<Int> = mutableListOf<Int>();
+    val rightList: MutableList<Int> = mutableListOf<Int>();
 
-    for (pair in contentAsArray) {
-
-        val simpleArray= pair.trim().split("   ").filter { it.isNotBlank() }
-        simpleArray.forEach{ println(it.toInt()) }
-        if (simpleArray.isEmpty()) continue
+    for (pairs in contentAsArray) {
+        val pair = pairs.trim().split("   ").filter { it.isNotBlank() }
+        // simpleArray.forEach{ println(it.toInt()) }
+        if (pair.isEmpty()) continue
         // println(simpleArray)
 
-        val el1: Int = simpleArray[0].toInt()
-        array1.add(el1)
+        val leftElement: Int = pair.first().toInt()
+        leftList.add(leftElement)
 
-        val el2: Int = simpleArray[simpleArray.size.toInt() - 1].toInt()
-        array2.add(el2)
-
-        println("$el1, $el2")
-
+        val rightElement: Int = pair.last().toInt()
+        rightList.add(rightElement)
         // val distance = abs(el1-el2);
-
         // totalDistance += distance
     }
 
-    val firstSortedList = array1.sorted()
-    val secondSortedList = array2.sorted()
+    val rightSortedList = rightList.sorted()
+    val leftSortedList = leftList.sorted()
 
-    for ( i in 0..999) {
-        val distance = abs(firstSortedList[i]-secondSortedList[i])
+    for ( index in rightSortedList.indices) {
+        val distance = abs(leftSortedList[index]-rightSortedList[index])
         totalDistance += distance
     }
 
-    println("Size of first list is ${firstSortedList.size} and second list is ${secondSortedList.size}")
     println("Total distance: $totalDistance")
 }
 
