@@ -5,7 +5,7 @@ fun main() {
     println("Project Initialized")
 
     println("Day 2")
-    println("Part One")
+    // println("Part One")
 
     // Read File
     val pathToInput = Path.of("../input.txt")
@@ -17,14 +17,16 @@ fun main() {
     // Counter for Safe Reports
     var safeReports = 0
     var numberOfReports = 0
+
     report@for (report in reportsAsList) {
         val reportAsList = report.split(" ")
 
         if(reportAsList.size <= 1) {
             // println("${reportAsList.isEmpty()}")
-            continue
+            continue@report
         }
 
+        // Part One
         val safelyMonotoneDecreasing = reportAsList.windowed(2).all { (firstElement, secondElement) ->
             val a = firstElement.toInt()
             val b = secondElement.toInt()
@@ -38,40 +40,42 @@ fun main() {
         }
 
         println("List $reportAsList: safeMonotoneIncrease is $safelyMonotoneIncreasing, safeMonotoneDecrease is $safelyMonotoneDecreasing")
+        // Definitely Safe
         if(safelyMonotoneIncreasing || safelyMonotoneDecreasing) {
+            println("This list is safe")
             safeReports+=1
+            continue@report
+        }
+
+        println("This list isn't safe, let's check again")
+        // If Unsafe, check if removing one numbers results in it being safe again
+        failsafe@for ( i in reportAsList.indices) {
+
+            // val amendedList = reportAsList.toMutableList().removeAt(i).toList()
+            val amendedReport = reportAsList.filterIndexed { index, _ -> index != i }.map { it.toInt() }
+             val isSafelyMonotoneDecreasing = amendedReport.windowed(2).all { (firstElement, secondElement) ->
+                 firstElement > secondElement && (firstElement - secondElement) in 1..3
+            }
+
+            val isSafelyMonotoneIncreasing = amendedReport.windowed(2).all { (firstElement, secondElement) ->
+                firstElement < secondElement && (secondElement - firstElement) in 1..3
+            }
+
+            println("List $reportAsList: safeMonotoneIncrease is $isSafelyMonotoneIncreasing, safeMonotoneDecrease is $isSafelyMonotoneDecreasing")
+            // Definitely Safe
+            if(isSafelyMonotoneIncreasing || isSafelyMonotoneDecreasing) {
+                println("The amended list $amendedReport is safe")
+                safeReports+=1
+                break@failsafe
+            }
+
         }
         println("Neither or. $reportAsList is unsafe!!")
         numberOfReports+=1
-//        for (index in reportAsList.indices) {
-//            println("Checking index $index")
-//
-//            // skip check if next index in report doesn't exist
-//            if ((index+1) !in reportAsList.indices) {
-//                println("Current index is $index and next index is ${index+1} so skipping check")
-//                continue}
-//
-//            // Check if all increasing or decreasing!
-//
-//            val difference = abs(reportAsList[index].toInt() - reportAsList[index+1].toInt())
-//            if (difference in 1..3) {
-//                println("Difference is $difference, we are safe")
-//                // do nothing if safe for current check
-//                continue
-//            }  else {
-//                println("Uhoh, difference is $difference. Lets look at the next report")
-//                println("This report $report isnt safe")
-//                // skip report loop if not safe
-//                continue@report
-//            }
-//        }
-//        println("All parameters were safe, so report $report is ok")
-//        // If inner loop not skipped, that means every thing was safe
-//        safeReports+=1
-
 
     }
 
     println("$numberOfReports/${reportsAsList.size} checked")
-    println("Safe Reports: $safeReports")
+    println("$safeReports reports are safe")
+
 }
