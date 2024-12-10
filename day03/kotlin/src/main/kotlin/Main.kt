@@ -1,4 +1,5 @@
 import java.nio.file.Path
+import kotlin.io.path.exists
 import kotlin.io.path.readText
 
 fun main() {
@@ -8,6 +9,8 @@ fun main() {
     // Load project
     val pathToInput = Path.of("../input.txt")
     val content = pathToInput.readText()
+
+    require(pathToInput.exists()) {"No input file found in given path"}
 
     println(content)
     // Define Regex for Pattern matching

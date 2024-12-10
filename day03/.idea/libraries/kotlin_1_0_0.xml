@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="kotlin-1.0.0">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/kotlin/build/distributions/kotlin-1.0.0.zip!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
