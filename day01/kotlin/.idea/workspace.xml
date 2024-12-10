@@ -5,22 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a0221b52-c742-412a-bde8-c4eec3535322" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../day03/kotlin/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../day03/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../day03/.idea/day03.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../day03/.idea/libraries/Add_gradle_build_files.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../day03/.idea/libraries/kotlin_1_0_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../day03/.idea/libraries/kotlin_1_0_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../day03/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../day03/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../day03/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../day03/kotlin/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../day03/kotlin/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../day03/kotlin/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../day03/kotlin/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../day03/kotlin/.idea/kotlinc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../day03/kotlin/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../day03/kotlin/.idea/vcs.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../day02/kotlin/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../day02/kotlin/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../day02/kotlin/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../day02/kotlin/gradle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../day02/kotlin/gradle/libs.versions.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../day02/kotlin/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../day02/kotlin/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../day02/kotlin/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../day02/kotlin/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../day02/kotlin/settings.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day02/kotlin/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../day02/kotlin/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day02/kotlin/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../day02/kotlin/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day02/kotlin/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../day02/kotlin/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day02/kotlin/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../day02/kotlin/src/main/kotlin/Main.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,23 +29,23 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 5
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2q2krRObEmHB3ck87YOUldYpMb3" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

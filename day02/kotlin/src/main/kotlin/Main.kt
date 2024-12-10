@@ -9,6 +9,7 @@ fun main() {
 
     // Read File
     val pathToInput = Path.of("../input.txt")
+    require(pathToInput.exists()) {"Input doesn't exist"}
     val inputContent = pathToInput.readText()
     // println(inputContent)
     val reportsAsList = inputContent.split("\n").filter { it.isNotEmpty() }
