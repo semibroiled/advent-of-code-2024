@@ -60,7 +60,7 @@ fun main() {
     // Running counter for similarity score
     var similarityScore = 0
 
-    leftList.forEach() { leftNum ->
+    leftList.forEach { leftNum ->
         val countInRight = rightList.count { rightNum -> rightNum == leftNum }
         similarityScore += leftNum * countInRight
     }
