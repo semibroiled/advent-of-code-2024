@@ -62,7 +62,7 @@ fun main() {
                 firstElement < secondElement && (secondElement - firstElement) in 1..3
             }
 
-            println("List $reportAsList: safeMonotoneIncrease is $isSafelyMonotoneIncreasing, safeMonotoneDecrease is $isSafelyMonotoneDecreasing")
+            println("List $amendedReport: safeMonotoneIncrease is $isSafelyMonotoneIncreasing, safeMonotoneDecrease is $isSafelyMonotoneDecreasing")
             // Definitely Safe
             if(isSafelyMonotoneIncreasing || isSafelyMonotoneDecreasing) {
                 println("The amended list $amendedReport is safe")
